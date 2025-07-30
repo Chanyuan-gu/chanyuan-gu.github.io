@@ -1,103 +1,131 @@
+"use client";
+
+import { motion } from "framer-motion";
+import NavBar from "./components/NavBar";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <NavBar />
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section
+          id="bio"
+          className="h-screen flex flex-col items-center justify-center bg-white"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-center"
+          >
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          <Image
+                src="/profile.jpg"  // <-- put your image file in the /public folder
+                alt="Chanyuan Gu"
+                width={200}
+                height={200}
+                className="rounded-full mx-auto mb-6 shadow-lg"
+              />
+            <h1 className="text-6xl font-bold">Chanyuan Gu</h1>
+            <p className="text-xl mt-4 text-gray-600">
+              Researcher | Educator | Innovator
+            </p>
+          </motion.div>
+        </section>
+
+        {/* Papers Section */}
+        <section id="papers" className="py-20 bg-gray-50">
+          <h2 className="text-4xl font-bold text-center mb-8">Papers</h2>
+          <ul className="max-w-2xl mx-auto space-y-4 text-lg">
+            <li>
+              <a
+                href="https://doi.org/10.1038/s41539-025-00337-y"
+                className="text-indigo-600 hover:underline"
+              >
+                Reading comprehension in L1 and L2 readers: neurocomputational mechanisms revealed through large language models
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.science.org/doi/10.1126/sciadv.adn7744"
+                className="text-indigo-600 hover:underline"
+              >
+                Predicting the next sentence (not word) in large language models: What model-brain alignment tells us about discourse comprehension
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://doi-org.ezproxy.lib.uconn.edu/10.1073/pnas.2309054121"
+                className="text-indigo-600 hover:underline"
+              >
+                Onscreen presence of instructors in video lectures affects learners&apos; neural synchrony and visual attention during multimedia learning
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://doi.org/10.3758/s13428-022-01842-3"
+                className="text-indigo-600 hover:underline"
+              >
+                From eye movements to scanpath networks: A method for studying individual differences in expository text reading
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://doi.org/10.1111/desc.13161"
+                className="text-indigo-600 hover:underline"
+              >
+                The brain basis of handwriting deficits in Chinese children with developmental dyslexia
+              </a>
+            </li>
+            <li>
+              <a
+                href=" "
+                className="text-indigo-600 hover:underline"
+              >
+                The Effect of Subjective Phonetic-radical Neighborhood on Character Naming in Chinese Children
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://doi.org/10.1016/j.neubiorev.2020.06.032"
+                className="text-indigo-600 hover:underline"
+              >
+                Auditory processing deficit in individuals with dyslexia: A meta-analysis of mismatch negativity
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://doi.org/10.1002/hbm.24968"
+                className="text-indigo-600 hover:underline"
+              >
+                Men and women differ in the neural basis of handwriting
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        {/* Media Section */}
+        <section id="media" className="py-20 bg-white">
+          <h2 className="text-4xl font-bold text-center mb-8">Media</h2>
+          <p className="text-center text-gray-500">
+            Coming soon — talks, interviews, and press coverage will be listed here.
+          </p>
+        </section>
+
+
+        {/* CV Section */}
+        <section id="cv" className="py-20 bg-gray-50 text-center">
+          <h2 className="text-4xl font-bold mb-6">Curriculum Vitae</h2>
+          <p className="text-lg">
+            Download my full CV{" "}
+            <a href="/Chanyuan Gu_CV.pdf" className="text-indigo-600 hover:underline">
+              here
+            </a>.
+          </p>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
