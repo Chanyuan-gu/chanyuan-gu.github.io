@@ -1,15 +1,18 @@
 /* Container layout */
 .container {
   display: flex;
+  flex-direction: row;      /* always side-by-side */
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 40px;
   max-width: 950px;
   margin: auto;
+  min-width: 600px;         /* prevents collapsing */
 }
 
 /* Left column: profile */
 .profile-column {
-  flex: 0 0 240px;   /* fixed width for left side */
+  flex: 0 0 240px;   /* fixed width */
   text-align: center;
 }
 
@@ -55,6 +58,7 @@
 /* Right column: about text */
 .about-column {
   flex: 1;
+  min-width: 300px;  /* ensures it doesn't shrink too much */
 }
 
 .about-column h2 {
