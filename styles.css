@@ -1,39 +1,59 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 2rem auto;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fafafa;
+/* Layout */
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-nav {
-  margin-bottom: 1.5rem;
+/* Left column */
+.profile-column {
+  flex: 1;
+  max-width: 260px;
+  text-align: center;
 }
 
-nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #0066cc;
-  font-weight: bold;
+.profile-pic {
+  width: 140px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.profile-name {
+  font-size: 1.5rem; /* smaller than before */
+  margin-bottom: 0.3rem;
 }
 
-h1 {
-  color: #222;
-}
-
-h2 {
-  margin-top: 1.2rem;
+.profile-title {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 0;
+  line-height: 1.4;
   color: #444;
 }
 
-footer {
-  margin-top: 3rem;
-  font-size: 0.9em;
-  text-align: center;
+.profile-location {
+  font-size: 0.9rem;
   color: #666;
+}
+
+.profile-links a {
+  margin: 0 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #0066cc;
+}
+
+.profile-links a:hover {
+  text-decoration: underline;
+}
+
+/* Right column */
+.about-column {
+  flex: 2;
+}
+
+.about-column h2 {
+  margin-top: 0;
 }
