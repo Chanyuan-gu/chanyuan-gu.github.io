@@ -1,8 +1,8 @@
 /* ========== Global Styles ========== */
 body {
   font-family: Arial, sans-serif;
-  font-size: 16px;         /* increase base font size */
-  line-height: 1.6;
+  font-size: 18px;     /* bump up from 16px */
+  line-height: 1.7;    /* extra breathing room */
   color: #333;
   background-color: #fafafa;
   margin: 0;
