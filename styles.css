@@ -1,27 +1,35 @@
-/* Compact Profile Styling */
+/* Container layout */
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 950px;
+  margin: auto;
+}
+
+/* Left column: profile */
 .profile-column {
-  flex: 1;
-  max-width: 240px;
+  flex: 0 0 240px;   /* fixed width for left side */
   text-align: center;
 }
 
 .profile-pic {
-  width: 120px;   /* balanced size */
+  width: 120px;       /* nice compact size */
   border-radius: 50%;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 }
 
 .profile-name {
-  font-size: 1.1rem; /* smaller but still prominent */
-  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
 }
 
 .profile-title {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: normal;
   line-height: 1.3;
+  margin: 0.4rem 0;
   color: #444;
-  margin: 0.3rem 0;
 }
 
 .profile-location {
@@ -44,8 +52,12 @@
   text-decoration: underline;
 }
 
-/* About column smaller heading */
+/* Right column: about text */
+.about-column {
+  flex: 1;
+}
+
 .about-column h2 {
-  font-size: 1.1rem;
   margin-top: 0;
+  font-size: 1.2rem;
 }
