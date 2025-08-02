@@ -43,47 +43,47 @@ nav a:hover {
   gap: 40px;
 }
 
-/* ========== Left Column: Profile ========== */
+/* ========== Left Column: Profile (Photo-focused) ========== */
 .profile-column {
-  flex: 0 0 300px;       /* make left column wider */
+  flex: 0 0 300px;     
   text-align: center;
 }
 
 .profile-pic {
-  width: 180px;          /* bigger photo */
+  width: 180px;          /* large photo */
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .profile-name {
-  font-size: 1.8rem;     /* larger name */
+  font-size: 1.3rem;     /* reduced name size */
   font-weight: bold;
-  margin: 0.6rem 0;
+  margin: 0.4rem 0;
 }
 
 .profile-title {
-  font-size: 1.2rem;     /* larger title */
+  font-size: 0.9rem;     /* modest title */
   font-weight: normal;
-  line-height: 1.5;
-  margin: 0.6rem 0;
-  color: #333;
+  line-height: 1.3;
+  margin: 0.3rem 0;
+  color: #444;
 }
 
 .profile-location {
-  font-size: 1rem;       /* location larger */
-  color: #555;
-  margin-bottom: 0.6rem;
+  font-size: 0.8rem;     /* smaller location */
+  color: #666;
+  margin-bottom: 0.4rem;
 }
 
 .profile-links {
-  font-size: 1rem;       /* links larger */
+  font-size: 0.8rem;     /* subtle links */
 }
 
 .profile-links a {
-  margin: 0 6px;
+  margin: 0 5px;
   text-decoration: none;
   color: #0066cc;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .profile-links a:hover {
