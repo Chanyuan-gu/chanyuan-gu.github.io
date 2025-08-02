@@ -45,43 +45,45 @@ nav a:hover {
 
 /* ========== Left Column: Profile ========== */
 .profile-column {
-  flex: 0 0 240px;   /* fixed width */
+  flex: 0 0 300px;       /* make left column wider */
   text-align: center;
 }
 
 .profile-pic {
-  width: 120px;       /* compact photo */
+  width: 180px;          /* bigger photo */
   border-radius: 50%;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .profile-name {
-  font-size: 1.2rem;
-  margin: 0.3rem 0;
+  font-size: 1.8rem;     /* larger name */
+  font-weight: bold;
+  margin: 0.6rem 0;
 }
 
 .profile-title {
-  font-size: 0.9rem;
+  font-size: 1.2rem;     /* larger title */
   font-weight: normal;
-  line-height: 1.3;
-  margin: 0.4rem 0;
-  color: #444;
+  line-height: 1.5;
+  margin: 0.6rem 0;
+  color: #333;
 }
 
 .profile-location {
-  font-size: 0.8rem;
-  color: #666;
-  margin-bottom: 0.4rem;
+  font-size: 1rem;       /* location larger */
+  color: #555;
+  margin-bottom: 0.6rem;
 }
 
 .profile-links {
-  font-size: 0.8rem;
+  font-size: 1rem;       /* links larger */
 }
 
 .profile-links a {
-  margin: 0 4px;
+  margin: 0 6px;
   text-decoration: none;
   color: #0066cc;
+  font-weight: bold;
 }
 
 .profile-links a:hover {
